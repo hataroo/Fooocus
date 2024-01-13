@@ -72,7 +72,7 @@ vae_approx_filenames = [
 
 def download_models():
     for file_name, url in checkpoint_downloads.items():
-        load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
+        load_file_from_url(url=https://huggingface.co/cagliostrolab/animagine-xl-3.0/blob/main/animagine-xl-3.0.safetensors, model_dir=path_checkpoints, file_name=file_name)
     for file_name, url in embeddings_downloads.items():
         load_file_from_url(url=url, model_dir=path_embeddings, file_name=file_name)
     for file_name, url in lora_downloads.items():
