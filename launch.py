@@ -71,24 +71,20 @@ vae_approx_filenames = [
 
 
 def download_models():
-    # 以下の辞書は例です。実際のURLとファイル名に置き換えてください。
     checkpoint_downloads = {
         'pytorch_model.bin': 'https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors'
     }
-    embeddings_downloads = {}  # ここに必要なデータを追加
-    lora_downloads = {}  # ここに必要なデータを追加
-    vae_approx_filenames = {}  # ここに必要なデータを追加
+    # embeddings_downloads, lora_downloads, vae_approx_filenames を適宜定義
 
     for file_name, url in checkpoint_downloads.items():
-        load_file_from_url(url, path_checkpoints, file_name)
+        load_file_from_url(url=url, model_dir=path_checkpoints, file_name=file_name)
     for file_name, url in embeddings_downloads.items():
-        load_file_from_url(url, path_embeddings, file_name)
+        load_file_from_url(url=url, model_dir=path_embeddings, file_name=file_name)
     for file_name, url in lora_downloads.items():
-        load_file_from_url(url, path_loras, file_name)
+        load_file_from_url(url=url, model_dir=path_loras, file_name=file_name)
     for file_name, url in vae_approx_filenames.items():
-        load_file_from_url(url, path_vae_approx, file_name)
+        load_file_from_url(url=url, model_dir=path_vae_approx, file_name=file_name)
 
-    # この部分はループ外にあるべきです。
     load_file_from_url(
         url='https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin',
         model_dir=path_fooocus_expansion,
@@ -96,6 +92,7 @@ def download_models():
     )
 
     return
+
 
 
 
