@@ -84,7 +84,7 @@ def download_models():
         url2='https://huggingface.co/cagliostrolab/animagine-xl-3.0/resolve/main/animagine-xl-3.0.safetensors',
         model_dir=path_fooocus_expansion,
         file_name='pytorch_model.bin'
- 
+    ) 
         load_file_from_url(
         url='https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin',
         model_dir=path_fooocus_expansion,
